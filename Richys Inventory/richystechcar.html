@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RICHY • INVENTORY</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap');
+        
+        :root {
+            --glass-bg: rgba(139, 92, 246, 0.15);
+            --glass-border: rgba(167, 139, 250, 0.3);
+        }
+        
+        body {
+            font-family: 'Inter', system-ui, sans-serif;
+        }
+        
+        .title-font {
+            font-family: 'Playfair Display', sans-serif;
+        }
+
+        .glass {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-glass {
+            background: rgba(30, 10, 60, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        .hero-bg {
+            background: linear-gradient(135deg, #4c1d95 0%, #7c3aed 50%, #a855f7 100%);
+        }
+
+        .purple-glow {
+            box-shadow: 0 0 40px rgba(167, 139, 250, 0.6);
+        }
+
+        .section-bg {
+            background: linear-gradient(to bottom, rgba(30, 10, 60, 0.9), rgba(15, 5, 30, 0.95));
+        }
+
+.max-w-3xl mx-auto px-6{align-items: center; justify-content: center; text-align: center;}
+
+
+
+.line {
+      border: none;           /* Remove default border */
+      height: 3px;            /* Thickness of the line */
+      background-color: #ff0000;  /* Your color */
+      margin: 20px 0;         /* Spacing above and below */
+    }
+
+    .line2 {
+      border: none;           /* Remove default border */
+      height: 1px;            /* Thickness of the line */
+      background-color: #ff0000;  /* Your color */
+      margin: 20px 0;         /* Spacing above and below */
+    }
+
+.h2title{ color:#a855f7}
+.h2title{font-size: 50px}
+    </style>
+</head>
+<body class="bg-[#0a051f] text-white overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="nav-glass fixed top-0 left-0 right-0 z-50 border-b border-violet-400/20">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                 <a href="https://disrichy12.github.io/RichyHomePage/Disrichy.html">
+                    <img src="riiconspics/roundtecheye.png" height="40" width="50">
+                </a>
+                <span class="title-font text-3xl font-bold tracking-tighter bg-gradient-to-r from-violet-300 to-fuchsia-300 bg-clip-text text-transparent">
+                    RICHY INVENTORY
+                </span>
+            </div>
+
+            <!-- Menu -->
+            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
+               <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/homepurpleicon.png" height="40" width="50"></a>
+                
+            </div>
+
+            <div class="flex items-center gap-4">
+                <button onclick="toggleMobileMenu()" 
+                        class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl glass text-xl">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <a href="https://docs.google.com/spreadsheets/d/1i8_ECihvHctd4pPJ8dM_hRnv8H5pJaIwVQ4rrVdRQ9I/edit?gid=1612834497#gid=1612834497" 
+                   class="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 glass border border-violet-300/30 font-medium text-sm transition-all hover:scale-105">
+                    <center><img src="riiconspics/sheetsicon.webp"height="20" width="20"></center> Google Sheets Portal
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden nav-glass border-t border-violet-400/20 py-6">
+            <div class="flex flex-col gap-6 px-8 text-lg">
+                <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors" onclick="toggleMobileMenu()">Home</a>
+                <a href="#features" class="hover:text-violet-300 transition-colors" onclick="toggleMobileMenu()">Browser</a>
+                
+            </div>
+        </div>
+    </nav>
+
+    <!-- GALLERY / EXAMPLES -->
+    <section id="gallery" class="py-24 bg-[#0f0626]">"
+        <div class="max-w-3xl mx-auto px-6">
+            <center><h2  class="h2title" ><strong>Tech Car </strong></h2></center>
+         <center>
+           <img src="riiconspics/riicon4.png"height="900" width="350">
+         </center>   
+         
+    <hr class="line"> 
+    <img src="ristuff/stuff1.png"height="100" width="100"><br>
+    <p3>Brand / Model - Sony A7ii</p3><br>
+    <p3>Type - Camera</p3><br>
+    <p3>Use - Film Content</p3><br>
+ <hr class="line2"> 
+  <img src="ristuff/stuff2.png"height="100" width="100"><br>
+    <p3>Brand - Google leveno</p3><br>
+    <p3>Type - Computer Laptop</p3><br>
+    <p3>Use - Optional/Backup Computer</p3><br>
+ <hr class="line2"> 
+   <img src="ristuff/stuff3.png"height="100" width="100"><br>
+    <p3>Brand - Google leveno</p3><br>
+    <p3>Type - Computer Laptop</p3><br>
+    <p3>Use - Optional/Backup Computer</p3><br>
+ <hr class="line2"> 
+   <img src="ridemopics/demopic2.png"height="100" width="100"><br>
+    <p3>Brand - Google leveno</p3><br>
+    <p3>Type - Computer Laptop</p3><br>
+    <p3>Use - Optional/Backup Computer</p3><br>
+ <hr class="line2"> 
+   <img src="ridemopics/demopic2.png"height="100" width="100"><br>
+    <p3>Brand - Google leveno</p3><br>
+    <p3>Type - Computer Laptop</p3><br>
+    <p3>Use - Optional/Backup Computer</p3><br>
+ <hr class="line2"> 
+   <img src="ridemopics/demopic2.png"height="100" width="100"><br>
+    <p3>Brand - Google leveno</p3><br>
+    <p3>Type - Computer Laptop</p3><br>
+    <p3>Use - Optional/Backup Computer</p3><br>
+ <hr class="line2"> 
+
+    <!-- FOOTER / CONTACT -->
+     <footer>
+        <br>
+         <div class="mt-12 flex justify-center gap-8 text-3xl">
+                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-google"></i></a>
+                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+            </div> 
+           <br>
+           
+           <center><p3>Speedproduction<br>
+        Richys Inventory </p3></center>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Tailwind script already loaded via CDN
+        console.log('%cGlass Purple Theme loaded successfully ✨', 'color:#c026d3; font-family:monospace');
+        
+        // Simple scroll effect for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-2xl');
+            } else {
+                nav.classList.remove('shadow-2xl');
+            }
+        });
+    </script>
+</body>
+</html>
