@@ -67,6 +67,48 @@
     }
 .h2title{ color:#a855f7}
 .h2title{font-size: 50px}
+
+
+
+.thumbnail {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
+
+
     </style>
 </head>
 <body class="bg-[#0a051f] text-white overflow-x-hidden">
@@ -116,144 +158,152 @@
         <div class="max-w-3xl mx-auto px-6">
             <center><h2  class="h2title" ><strong>Storage Chest</strong></h2></center>
          <center>
-           <img src="riiconspics/riicon5.png" height="200" width="250">
+           <img src="riiconspics/riicon5.png" height="200" width="250"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)">
          </center>   
          
     <hr class="line"> 
-    <img src="richestpics1/chest1.png"height="100" width="100"><br>
+    <img  src="richestpics1/chest1.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand / Travle Pouch</p3><br>
     <p3>Type - Bag</p3><br>
     <p3>Use - Quick Trip Run</p3><br>
  <hr class="line2"> 
- <img src="richestpics1/chest4.png"height="100" width="100"><br>
+ <img src="richestpics1/chest4.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
  <p3>Brand / Drone Pouch</p3><br>
  <p3>Type - Bag</p3><br>
  <p3>Use - Storing Drone Camera</p3><br>
 <hr class="line2"> 
-<img src="richestpics1/chest5.png"height="100" width="100"><br>
+<img src="richestpics1/chest5.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Spear Pouch</p3><br>
 <p3>Type - Bag</p3><br>
 <p3>Use - Spare Things</p3><br>
 <hr class="line2"> 
-<img src="richestpics1/chest2.png"height="100" width="100"><br>
+<img src="richestpics1/chest2.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Hand Grip Tripod</p3><br>
 <p3>Type - </p3>Tripod<br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2">  
-<img src="richestpics11/chest7.png"height="100" width="100"><br>
+<img src="richestpics11/chest7.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Manthroto Big Tripod</p3><br>
 <p3>Type - Tripod</p3><br>
 <p3>Use - Video Record</p3><br>
-<hr class="line2">   <img src="richestpics1/chest3.png"height="100" width="100"><br>
+<hr class="line2">   <img src="richestpics1/chest3.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Comica Boom XD</p3><br>
 <p3>Type - Wireless Mic</p3><br>
 <p3>Use - Video Record / Sound Record</p3><br>
 <hr class="line2"> 
-<img src="richestpics11/chest6.png"height="100" width="100"><br>
+<img src="richestpics11/chest6.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Zip Case Gopro Mounts</p3><br>
 <p3>Type -  Bag</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics11/chest8.png"height="100" width="100"><br>
+<img src="richestpics11/chest8.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon Camera Bag</p3><br>
 <p3>Type - Camera Bag</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics11/chest9.png"height="100" width="100"><br>
+<img src="richestpics11/chest9.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon Battery Chargers</p3><br>
 <p3>Type - Camera Battery Chargers</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics11/chest10.png"height="100" width="100"><br>
+<img src="richestpics11/chest10.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon 50mm</p3><br>
 <p3>Type - Camera Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics2/chest11.png"height="100" width="100"><br>
+<img src="richestpics2/chest11.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Sony 28-70mm</p3><br>
 <p3>Type - Camera Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics2/chest12.png"height="100" width="100"><br>
+<img src="richestpics2/chest12.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon Tameron 70-300</p3><br>
 <p3>Type - Camera Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2">
-<img src="richestpics2/chest13.png"height="100" width="100"><br>
+<img src="richestpics2/chest13.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon 18-55mm</p3><br>
 <p3>Type - Camera Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics2/chest14.png"height="100" width="100"><br>
+<img src="richestpics2/chest14.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Comica Shotgun Mik</p3><br>
 <p3>Type - Camera Mic</p3><br>
 <p3>Use - Video Recording / Sound Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics2/chest15.png"height="100" width="100"><br>
+<img src="richestpics2/chest15.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - LP Shotgun Mic</p3><br>
 <p3>Type - Camera Mic</p3><br>
 <p3>Use - Video Recording / Sound Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics22/chest16.png"height="100" width="100"><br>
+<img src="richestpics22/chest16.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Onni Small Camera Bag</p3><br>
 <p3>Type - Camera Bag</p3><br>
 <p3>Use - Storage Bag</p3><br>
 <hr class="line2"> 
-<img src="richestpics22/chest17.png"height="100" width="100"><br>
-<p3>Brand / Model - Sholder Bag GoPro Mounts</p3><br>
+<img src="richestpics22/chest17.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<p3>Brand / Model - Shoulders Bag GoPro Mounts</p3><br>
 <p3>Type - Backpack</p3><br>
 <p3>Use - Storage Bag</p3><br>
 <hr class="line2"> 
-<img src="richestpics22/chest18.png"height="100" width="100"><br>
+<img src="richestpics22/chest18.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Gopro Head Band Mount</p3><br>
 <p3>Type - Camera Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics22/chest19.png"height="100" width="100"><br>
+<img src="richestpics22/chest19.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Canon M50 Cage</p3><br>
 <p3>Type - Camera Cage</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics3/chest21.png"height="100" width="100"><br>
+<img src="richestpics3/chest21.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Gopro Float Mount</p3><br>
 <p3>Type - Camera Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics3/chest22.png"height="100" width="100"><br>
+<img src="richestpics3/chest22.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Gopro Mouth Mount</p3><br>
 <p3>Type - Camera Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics3/chest23.png"height="100" width="100"><br>
+<img src="richestpics3/chest23.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Camera Handle Rigg</p3><br>
 <p3>Type - Camera Mount </p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2">  
-<img src="richestpics3/chest24.png"height="100" width="100"><br>
+<img src="richestpics3/chest24.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Benny Hat for Gopro Head Strap</p3><br>
 <p3>Type - Camera Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics3/chest25.png"height="100" width="100"><br>
+<img src="richestpics3/chest25.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Gopro Fish Bowl Mount</p3><br>
 <p3>Type - Camera Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics33/chest27.png"height="100" width="100"><br>
+<img src="richestpics33/chest27.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Sholder Bag for Sound Gear</p3><br>
 <p3>Type - Backpack</p3><br>
 <p3>Use - Storage Bag</p3><br>
 <hr class="line2"> 
-<img src="richestpics33/chest29.png"height="100" width="100"><br>
+<img src="richestpics33/chest29.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Misc Sound Equipment</p3><br>
 <p3>Type - Sound Gear</p3><br>
 <p3>Use - Film Content / Sound Recording</p3><br>
 <hr class="line2"> 
-<img src="richestpics33/chest30.png"height="100" width="100"><br>
+<img src="richestpics33/chest30.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
 <p3>Brand / Model - Single Camera, Bag</p3><br>
 <p3>Type - Camera Bag</p3><br>
 <p3>Use - Film Content</p3><br>
 <hr class="line2"> 
+
+  <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Large preview">
+    </div>
+
+
      <footer>
         <br>
          <div class="mt-12 flex justify-center gap-8 text-3xl">
@@ -284,6 +334,23 @@
             } else {
                 nav.classList.remove('shadow-2xl');
             }
+        });
+        
+    </script>
+
+    <script>
+         function showModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside the image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
         });
     </script>
 </body>
