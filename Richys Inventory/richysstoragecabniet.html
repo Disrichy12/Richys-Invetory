@@ -68,6 +68,44 @@
 .h2title{ color:#a855f7}
 .h2title{font-size: 50px}
 
+
+.thumbnail {
+            width: 200px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .thumbnail:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 8px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+
     </style>
 </head>
 <body class="bg-[#0a051f] text-white overflow-x-hidden">
@@ -117,151 +155,154 @@
         <div class="max-w-3xl mx-auto px-6">
             <center><h2  class="h2title" ><strong>Tech Cabinet</strong></h2></center>
          <center>
-           <img src="riiconspics/riicon3.png"height="100" width="200">
+           <img src="riiconspics/riicon3.png"height="100" width="200"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)">
          </center>   
          
     <hr class="line"> 
-    <img src="ricabinetpics1/cab1.png"height="100" width="100"><br>
+    <img src="ricabinetpics1/cab1.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand / Model - Canon M50</p3><br>
     <p3>Type - Camera</p3><br>
     <p3>Use - Film Content</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics1/cab2.png"height="100" width="100"><br>
+  <img src="ricabinetpics1/cab2.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Sony 72</p3><br>
     <p3>Type - Camera</p3><br>
     <p3>Use - Film Content</p3><br>
  <hr class="line2"> 
-   <img src="ricabinetpics1/cab3.png"height="100" width="100"><br>
+   <img src="ricabinetpics1/cab3.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Canon SLR2</p3><br>
     <p3>Type - Camera</p3><br>
     <p3>Use - Film Content</p3><br>
  <hr class="line2"> 
-   <img src="ricabinetpics1/cab5.png"height="100" width="100"><br>
-    <p3>Brand - Canon 800D</p3><br>
+   <img src="ricabinetpics1/cab5.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Type - Camera</p3><br>
     <p3>Use - Film Content</p3><br>
  <hr class="line2"> 
-   <img src="ricabinetpics1/cab4.png"height="100" width="100"><br>
+   <img src="ricabinetpics1/cab4.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google Chrome Book Leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-   <img src="ricabinetpics1/cab7.png"height="100" width="100"><br>
+   <img src="ricabinetpics1/cab7.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics1/cab8.png"height="100" width="100"><br>
+  <img src="ricabinetpics1/cab8.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics1/cab6.png"height="100" width="100"><br>
+  <img src="ricabinetpics1/cab6.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics1/cab9.png"height="100" width="100"><br>
+  <img src="ricabinetpics1/cab9.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics1/cab10.png"height="100" width="100"><br>
+  <img src="ricabinetpics1/cab10.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics2/cab11.png"height="100" width="100"><br>
+ <img src="ricabinetpics2/cab11.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics2/cab12.png"height="100" width="100"><br>
+  <img src="ricabinetpics2/cab12.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics2/cab13.png"height="100" width="100"><br>
+  <img src="ricabinetpics2/cab13.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics2/cab14.png"height="100" width="100"><br>
+  <img src="ricabinetpics2/cab14.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics2/cab15.png"height="100" width="100"><br>
+  <img src="ricabinetpics2/cab15.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-  <img src="ricabinetpics2/cab16.png"height="100" width="100"><br>
+  <img src="ricabinetpics2/cab16.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Google leveno</p3><br>
     <p3>Type - Computer Laptop</p3><br>
     <p3>Use - Optional/Backup Computer</p3><br>
  <hr class="line2"> 
-<img src="ricabinetpics2/cab17.png"height="100" width="100"><br>
+<img src="ricabinetpics2/cab17.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Mic Stick</p3><br>
     <p3>Type - Boom Mic Stand</p3><br>
     <p3>Use - Sound Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics2/cab19.png"height="100" width="100"><br>
+ <img src="ricabinetpics2/cab19.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Oculus Quest 2</p3><br>
     <p3>Type - Computer VR Headset</p3><br>
     <p3>Use - Computing / Gaming</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics3/cab20.png"height="100" width="100"><br>
+ <img src="ricabinetpics3/cab20.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Camera Bag</p3><br>
     <p3>Type - Camera Bag Storage</p3><br>
     <p3>Use - Storing Camera Equipment</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics3/cab21.png"height="100" width="100"><br>
+ <img src="ricabinetpics3/cab21.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Small Stabilizer</p3><br>
     <p3>Type - Video Stabilizer</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics3/cab22.png"height="100" width="100"><br>
+ <img src="ricabinetpics3/cab22.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Big Stabilizer</p3><br>
     <p3>Type - Video Stabilizer</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics3/cab23.png"height="100" width="100"><br>
+ <img src="ricabinetpics3/cab23.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Fish Bowl</p3><br>
     <p3>Type - GoPro Mount</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics3/cab24.png"height="100" width="100"><br>
+ <img src="ricabinetpics3/cab24.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - GoPro Mount</p3><br>
     <p3>Type - Chest Mount</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics33/cab25.png"height="100" width="100"><br>
+ <img src="ricabinetpics33/cab25.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - GoPro Mount</p3><br>
     <p3>Type - Dog Mount</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics33/cab27.png"height="100" width="100"><br>
+ <img src="ricabinetpics33/cab27.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - DJI Drone</p3><br>
     <p3>Type - Mavic Mini</p3><br>
     <p3>Use - Video Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics33/cab28.png"height="100" width="100"><br>
+ <img src="ricabinetpics33/cab28.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Takstar Mic</p3><br>
     <p3>Type - SGC-600 / Shotgun Mic</p3><br>
     <p3>Use - Video Recording / Sound Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics33/cab29.png"height="100" width="100"><br>
+ <img src="ricabinetpics33/cab29.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Comica mic</p3><br>
     <p3>Type - VM10-PRO Shotgun Mic</p3><br>
     <p3>Use - Video Recording / Sound Recording</p3><br>
  <hr class="line2"> 
- <img src="ricabinetpics4/cab30.png"height="100" width="100"><br>
+ <img src="ricabinetpics4/cab30.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
     <p3>Brand - Takstar Mic</p3><br>
     <p3>Type - SGC-598 / Shotgun Mic</p3><br>
     <p3>Use - Video Recording / Sound Recording</p3><br>
  <hr class="line2"> 
-
+  <!-- Modal -->
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img id="modalImage" class="modal-content" alt="Large preview">
+    </div>
     <!-- FOOTER / CONTACT -->
      <footer>
         <br>
@@ -276,7 +317,9 @@
         Richys Inventory </p3></center>
     </footer>
 
-    <script>
+    
+</body>
+<script>
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu');
             menu.classList.toggle('hidden');
@@ -295,5 +338,15 @@
             }
         });
     </script>
-</body>
+
+    <script>
+        function showModal(src) {
+            document.getElementById('modalImage').src = src;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
 </html>
