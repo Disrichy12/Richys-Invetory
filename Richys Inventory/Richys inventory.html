@@ -137,8 +137,8 @@
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden nav-glass border-t border-violet-400/20 py-6">
             <div class="flex flex-col gap-6 px-8 text-lg">
-                 
-                <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/homepurpleicon.png" height="40" width="50"></a>
+                   <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/homeicon.png" height="30" width="30"></a>
+                <a href="https://disrichy12.github.io/RichyHomePage/Disrichy.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/firefoxicon.png" height="20" width="20"></a>
             </div>
         </div>
     </nav>
@@ -151,33 +151,44 @@
     <section id="gallery" class="py-24 bg-[#0f0626]">
         <div class="max-w-7xl mx-auto px-6">
             <center><h2  class="h2title" >Storage Locations</h2></center>
+
+            <div class="mb-8 max-w-xl mx-auto">
+                <div class="glass rounded-2xl border border-violet-300/30 px-4 py-3 flex items-center gap-3">
+                    <i class="fa-solid fa-magnifying-glass text-violet-300"></i>
+                    <input id="inventorySearch" type="text" placeholder="Search storage locations..." class="w-full bg-transparent outline-none text-white placeholder-violet-200/70">
+                </div>
+            </div>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+            <div id="inventoryGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="storage chest">
                     <a href="richystoragechest.html"><img class="pic1" src="riiconspics/riicon5.png" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">Storage Chest</p6>
                 </div> 
-                <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+                <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="tech cab cabinet storage">
                     <a href="richysstoragecabniet.html"><img class="pic2" src="riiconspics/riicon3.png" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">Tech Cab</p6>
                 </div>  
-                <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+                <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="computer bag tech">
                     <a href="richyscomputerbag.html"><img class="pic3" src="riiconspics/riicon2.png" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">Computer Bag</p6>
                 </div>  
-                <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+                <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="ipad bag tech">
                     <a href="richysipadbag.html"><img class="pic4" src="riiconspics/riicon1.png" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">iPad Bag</p6>
                 </div>  
-                <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+                <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="tech car storage">
                     <a href="richystechcar.html"><img class="pic5" src="riiconspics/riicon4.png" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">Tech Car</p6>
                 </div>  
-               <div class="aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl">
+               <div class="inventory-card aspect-video glass rounded-3xl overflow-hidden flex flex-col items-center justify-center text-6xl" data-search="tech closet storage">
                     <a href="richystechcloset.html"><img class="pic6" src="riiconspics/techdoor3.jpg" height="20" width="20" alt="Storage Location 1"></a>
                     <p6 class="word2 mt-2">Tech Closet</p6>
                 </div>  
                 
+            </div>
+
+            <div id="noResults" class="hidden mt-8 text-center text-violet-200/80">
+                No storage locations match that keyword.
             </div>
         </div>
     </section>
@@ -205,6 +216,31 @@
 
         // Tailwind script already loaded via CDN
         console.log('%cGlass Purple Theme loaded successfully ✨', 'color:#c026d3; font-family:monospace');
+
+        const searchInput = document.getElementById('inventorySearch');
+        const inventoryCards = Array.from(document.querySelectorAll('.inventory-card'));
+        const noResults = document.getElementById('noResults');
+
+        function filterInventory() {
+            const query = searchInput.value.trim().toLowerCase();
+            let hasMatch = false;
+
+            inventoryCards.forEach(card => {
+                const searchableText = `${card.dataset.search || ''} ${card.textContent}`.toLowerCase();
+                const matches = searchableText.includes(query);
+                card.classList.toggle('hidden', !matches);
+                if (matches) {
+                    hasMatch = true;
+                }
+            });
+
+            noResults.classList.toggle('hidden', hasMatch || query === '');
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener('input', filterInventory);
+            filterInventory();
+        }
         
         // Simple scroll effect for navbar
         window.addEventListener('scroll', () => {
