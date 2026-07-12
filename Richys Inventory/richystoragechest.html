@@ -109,6 +109,76 @@
 
 
 
+.glasstext{
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+      backdrop-filter: blur(16px);           /* Frosted glass effect */
+      -webkit-backdrop-filter: blur(16px);   /* Safari support */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 300px;
+      text-align: center;
+      color: white;
+    }
+
+    .glasstext h1 {
+      margin: 0 0 15px 0;
+      font-size: 2.2rem;
+    }
+
+    .glasstext p {
+      margin: 0;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+
+
+
+.sidebyside {
+            display: flex;                /* Makes images sit side by side */
+            gap: 20px;                    /* Space between images */
+            flex-wrap: wrap;              /* Wrap to next line on small screens */
+            justify-content: center;      /* Center the images */
+            align-items: center;          /* Vertical alignment */
+            margin: 20px;
+}
+
+
+
+.mainglasstext{
+      background: rgba(255, 255, 255, 0.1); /* Semi-transparent white */
+      backdrop-filter: blur(16px);           /* Frosted glass effect */
+      -webkit-backdrop-filter: blur(16px);   /* Safari support */
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 20px;
+      padding: 40px 50px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+      max-width: 700px;
+      text-align: center;
+      color: white;
+    }
+
+    .glasstext h1 {
+      margin: 0 0 15px 0;
+      font-size: 2.2rem;
+    }
+
+    .mainglasstext p {
+      margin: 0;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    .searchable-item.is-hidden {
+      display: none !important;
+    }
+
+    .gallery-intro.is-hidden {
+      display: none !important;
+    }
+
     </style>
 </head>
 <body class="bg-[#0a051f] text-white overflow-x-hidden">
@@ -125,176 +195,450 @@
                 </span>
             </div>
 
+            
             <!-- Menu -->
             <div class="hidden md:flex items-center gap-10 text-sm font-medium">
                <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/homepurpleicon.png" height="40" width="50"></a>
                 
             </div>
-
-            <div class="flex items-center gap-4">
-                <button onclick="toggleMobileMenu()" 
-                        class="md:hidden w-10 h-10 flex items-center justify-center rounded-xl glass text-xl">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <a href="https://docs.google.com/spreadsheets/d/1i8_ECihvHctd4pPJ8dM_hRnv8H5pJaIwVQ4rrVdRQ9I/edit?gid=1612834497#gid=1612834497" 
-                   class="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 glass border border-violet-300/30 font-medium text-sm transition-all hover:scale-105">
-                    <center><img src="riiconspics/sheetsicon.webp"height="20" width="20"></center> Google Sheets Portal
-                </a>
+                 
+        <!-- Search Bar -->
+    <div class="relative mb-10">
+      <div class="glass rounded-3xl p-2 flex items-center gap-4 shadow-2xl">
+        <div class="pl-6 text-purple-400">
+          <i class="fas fa-search text-2xl"></i>
+        </div>
+        <input 
+          id="search-input"
+          type="text" 
+          placeholder="Type keyword... (tripod, bag, pouch, travel, mic, mount, etc.)"
+          class="flex-1 bg-transparent outline-none text-lg placeholder-zinc-500 py-5 pr-6"
+          autocomplete="off"
+        >
+        <button onclick="clearSearch()" 
+                class="px-8 py-5 bg-zinc-800 hover:bg-red-500/20 hover:text-red-400 rounded-2xl transition-colors">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+                
+               
             </div>
         </div>
-
-     <!-- Mobile Menu -->
+        <!-- Mobile Menu -->
         <div id="mobileMenu" class="hidden md:hidden nav-glass border-t border-violet-400/20 py-6">
             <div class="flex flex-col gap-6 px-8 text-lg">
-             
-                <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors"><img src="riiconspics/homepurpleicon.png" height="40" width="50"></a>
+                <a href="Richys inventory.html" class="hover:text-violet-300 transition-colors" onclick="toggleMobileMenu()">Home</a>
+                <a href="#features" class="hover:text-violet-300 transition-colors" onclick="toggleMobileMenu()">Browser</a>
                 
             </div>
-        </div>  
+        </div>
     </nav>
-
+<br>
+<br>
+<br>
     <!-- GALLERY / EXAMPLES -->
-    <section id="gallery" class="py-24 bg-[#0f0626]">"
+    <section id="gallery" class="py-24 bg-[#0f0626]">
         <div class="max-w-3xl mx-auto px-6">
-            <center><h2  class="h2title" ><strong>Storage Chest</strong></h2></center>
-         <center>
-           <img src="riiconspics/riicon5.png" height="200" width="250"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)">
-         </center>   
+            <div class="gallery-intro">
+                <center><h2  class="h2title" ><strong>Storage Chest</strong></h2></center>
+             <center>
+               <img src="riiconspics/riicon5.png" height="200" width="250"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)">
+             </center>
+            </div>
+    
          
+         <!-- Sample items - replace with your own data -->
+              <!-- Items Grid -->
     <hr class="line"> 
+    
+    <div class="item-card glass rounded-3xl p-6">
+    <div class="sidebyside">
     <img  src="richestpics1/chest1.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+    <div class="glasstext">
     <p3>Brand / Travle Pouch</p3><br>
     <p3>Type - Bag</p3><br>
     <p3>Use - Quick Trip Run</p3><br>
+    </div>
+    </div>
+    </div>
+
+
  <hr class="line2"> 
+ <div class="item-card glass rounded-3xl p-6">
+ <div class="sidebyside">
  <img src="richestpics1/chest4.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+ <div class="glasstext">
  <p3>Brand / Drone Pouch</p3><br>
  <p3>Type - Bag</p3><br>
- <p3>Use - Storing Drone Camera</p3><br>
+ <p3>Use - Storage</p3><br>
+ </div>
+</div>
+</div>
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
 <img src="richestpics1/chest5.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Spear Pouch</p3><br>
 <p3>Type - Bag</p3><br>
-<p3>Use - Spare Things</p3><br>
+<p3>Use - Storage</p3><br>
+</div>
+</div>
+</div>
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
 <img src="richestpics1/chest2.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Hand Grip Tripod</p3><br>
 <p3>Type - </p3>Tripod<br>
 <p3>Use - Video Recording</p3><br>
-<hr class="line2">  
+</div>
+</div>
+</div>
+
+
+<hr class="line2">
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
 <img src="richestpics11/chest7.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Manthroto Big Tripod</p3><br>
 <p3>Type - Tripod</p3><br>
 <p3>Use - Video Record</p3><br>
-<hr class="line2">   <img src="richestpics1/chest3.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+</div>
+</div>
+</div>
+
+<hr class="line2">   
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
+<img src="richestpics1/chest3.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Comica Boom XD</p3><br>
 <p3>Type - Wireless Mic</p3><br>
 <p3>Use - Video Record / Sound Record</p3><br>
+</div>
+</div>
+</div>
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
 <img src="richestpics11/chest6.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Zip Case Gopro Mounts</p3><br>
 <p3>Type -  Bag</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+<div class="sidebyside">
 <img src="richestpics11/chest8.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
-<p3>Brand / Model - Canon Camera Bag</p3><br>
-<p3>Type - Camera Bag</p3><br>
-<p3>Use - Video Recording</p3><br>
+<div class="glasstext">
+<p3>Brand / Model - Canon  Bag</p3><br>
+<p3>Type -  Bag</p3><br>
+<p3>Use - Storage</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics11/chest9.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Canon Battery Chargers</p3><br>
-<p3>Type - Camera Battery Chargers</p3><br>
-<p3>Use - Video Recording</p3><br>
+<p3>Type -  Battery Chargers</p3><br>
+<p3>Use - Charging</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics11/chest10.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Canon 50mm</p3><br>
-<p3>Type - Camera Lens</p3><br>
+<p3>Type -  Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics2/chest11.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+  <div class="glasstext">
 <p3>Brand / Model - Sony 28-70mm</p3><br>
-<p3>Type - Camera Lens</p3><br>
+<p3>Type -  Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics2/chest12.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Canon Tameron 70-300</p3><br>
-<p3>Type - Camera Lens</p3><br>
+<p3>Type -  Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2">
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics2/chest13.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Canon 18-55mm</p3><br>
-<p3>Type - Camera Lens</p3><br>
+<p3>Type -  Lens</p3><br>
 <p3>Use - Video Recording</p3><br>
-<hr class="line2"> 
+</div>
+</div>
+</div>
+
+
+
+
+
+<hr class="line2">
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">       
 <img src="richestpics2/chest14.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
-<p3>Brand / Model - Comica Shotgun Mik</p3><br>
-<p3>Type - Camera Mic</p3><br>
+<div class="glasstext">
+<p3>Brand / Model - Comica Shotgun Mic</p3><br>
+<p3>Type -  Microphone</p3><br>
 <p3>Use - Video Recording / Sound Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics2/chest15.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - LP Shotgun Mic</p3><br>
-<p3>Type - Camera Mic</p3><br>
+<p3>Type -  Microphone</p3><br>
 <p3>Use - Video Recording / Sound Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics22/chest16.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Onni Small Camera Bag</p3><br>
-<p3>Type - Camera Bag</p3><br>
-<p3>Use - Storage Bag</p3><br>
+<p3>Type -  Bag</p3><br>
+<p3>Use - Storage</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics22/chest17.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Shoulders Bag GoPro Mounts</p3><br>
 <p3>Type - Backpack</p3><br>
-<p3>Use - Storage Bag</p3><br>
+<p3>Use - Storage </p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics22/chest18.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Gopro Head Band Mount</p3><br>
-<p3>Type - Camera Mount</p3><br>
+<p3>Type -  Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics22/chest19.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Canon M50 Cage</p3><br>
-<p3>Type - Camera Cage</p3><br>
+<p3>Type - Cage Mount</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics3/chest21.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Gopro Float Mount</p3><br>
-<p3>Type - Camera Mount</p3><br>
+<p3>Type -  Mount / Water</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">
 <img src="richestpics3/chest22.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Gopro Mouth Mount</p3><br>
-<p3>Type - Camera Mount</p3><br>
+<p3>Type - Mount / POV / Water </p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">    
 <img src="richestpics3/chest23.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
-<p3>Brand / Model - Camera Handle Rigg</p3><br>
-<p3>Type - Camera Mount </p3><br>
+<div class="glasstext">
+<p3>Brand / Model -  Handle Rigg</p3><br>
+<p3>Type -  Mount </p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
+
+
 <hr class="line2">  
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">    
 <img src="richestpics3/chest24.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Benny Hat for Gopro Head Strap</p3><br>
-<p3>Type - Camera Mount</p3><br>
+<p3>Type - Mount / POV</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">    
 <img src="richestpics3/chest25.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Gopro Fish Bowl Mount</p3><br>
-<p3>Type - Camera Mount</p3><br>
+<p3>Type - Mount / Water</p3><br>
 <p3>Use - Video Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">    
 <img src="richestpics33/chest27.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Sholder Bag for Sound Gear</p3><br>
 <p3>Type - Backpack</p3><br>
-<p3>Use - Storage Bag</p3><br>
+<p3>Use - Storage </p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">      
 <img src="richestpics33/chest29.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
+<div class="glasstext">
 <p3>Brand / Model - Misc Sound Equipment</p3><br>
 <p3>Type - Sound Gear</p3><br>
 <p3>Use - Film Content / Sound Recording</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
+<div class="item-card glass rounded-3xl p-6">
+  <div class="sidebyside">      
 <img src="richestpics33/chest30.png"height="100" width="100"alt="Preview Image" class="thumbnail" onclick="showModal(this.src)"><br>
-<p3>Brand / Model - Single Camera, Bag</p3><br>
-<p3>Type - Camera Bag</p3><br>
-<p3>Use - Film Content</p3><br>
+<div class="glasstext">
+<p3>Brand / Model - Single Bag</p3><br>
+<p3>Type -  Bag</p3><br>
+<p3>Use - Storage</p3><br>
+</div>
+</div>
+</div>
+
+
+
+
 <hr class="line2"> 
 
   <!-- Modal -->
@@ -303,18 +647,100 @@
         <img id="modalImage" class="modal-content" alt="Large preview">
     </div>
 
+    <script>
+    function clearSearch() {
+      const input = document.getElementById('search-input');
+      if (input) {
+        input.value = '';
+        filterInventoryItems('');
+      }
+    }
+
+    function filterInventoryItems(query) {
+      const term = (query || '').toLowerCase().trim();
+      const intro = document.querySelector('#gallery .gallery-intro');
+      if (intro) {
+        intro.classList.toggle('is-hidden', !!term);
+      }
+
+      const separators = document.querySelectorAll('#gallery hr');
+      separators.forEach((separator) => {
+        separator.style.display = term ? 'none' : '';
+      });
+
+      const items = document.querySelectorAll('#gallery .searchable-item');
+      items.forEach((item) => {
+        const text = (item.textContent || '').toLowerCase();
+        const isMatch = !term || text.includes(term);
+        item.classList.toggle('is-hidden', !isMatch);
+        item.style.display = isMatch ? '' : 'none';
+      });
+    }
+
+    function prepareInventorySearch() {
+      const gallery = document.getElementById('gallery');
+      if (!gallery) return;
+
+      gallery.querySelectorAll('.item-card').forEach((card) => {
+        card.classList.add('searchable-item');
+      });
+
+      const thumbnails = Array.from(gallery.querySelectorAll('img.thumbnail'));
+      const heroThumb = gallery.querySelector('img.thumbnail[src*="riiconspics/riicon5.png"]');
+
+      thumbnails.forEach((thumb) => {
+        if (thumb === heroThumb || thumb.closest('.item-card') || thumb.closest('.searchable-item')) return;
+
+        const wrapper = document.createElement('div');
+        wrapper.className = 'searchable-item';
+        const parent = thumb.parentNode;
+        const nodesToMove = [];
+        let current = thumb.nextSibling;
+
+        while (current) {
+          const nextNode = current;
+          current = nextNode.nextSibling;
+
+          if (nextNode.nodeType === 1 && (nextNode.matches('hr.line2') || nextNode.matches('hr.line'))) {
+            nodesToMove.push(nextNode);
+            break;
+          }
+
+          nodesToMove.push(nextNode);
+        }
+
+        parent.insertBefore(wrapper, thumb);
+        wrapper.appendChild(thumb);
+        nodesToMove.forEach((node) => {
+          wrapper.appendChild(node);
+        });
+      });
+
+      filterInventoryItems('');
+    }
+
+    document.addEventListener('DOMContentLoaded', prepareInventorySearch);
+    document.addEventListener('DOMContentLoaded', () => {
+      const input = document.getElementById('search-input');
+      if (input) {
+        input.addEventListener('input', (event) => filterInventoryItems(event.target.value));
+      }
+    });
+    </script>
+
 
      <footer>
         <br>
          <div class="mt-12 flex justify-center gap-8 text-3xl">
-                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-google"></i></a>
-                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-youtube"></i></a>
-                <a href="#" class="hover:text-fuchsia-400 transition-colors"><i class="fa-brands fa-github"></i></a>
+             <a href="https://docs.google.com/spreadsheets/d/1i8_ECihvHctd4pPJ8dM_hRnv8H5pJaIwVQ4rrVdRQ9I/edit?gid=1612834497#gid=1612834497" 
+                   class="px-6 py-3 rounded-2xl bg-white/10 hover:bg-white/20 glass border border-violet-300/30 font-medium text-sm transition-all hover:scale-105">
+                    <center><img src="riiconspics/sheetsicon.webp"height="20" width="20"></center> Google Sheets Portal
+                </a>
             </div> 
            <br>
            
            <center><p3>Speedproduction<br>
-        Richys Inventory </p3></center>
+        Richys Chest </p3></center>
     </footer>
 
     <script>
@@ -353,5 +779,8 @@
             if (e.target === this) closeModal();
         });
     </script>
+
+
+
 </body>
 </html>
